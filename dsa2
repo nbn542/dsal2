@@ -1,77 +1,75 @@
-marks = []
+From ctypes import sizeof
+Print (“ hello World Welcome To Sets “) 
+A = set([])
+No = int(input(“ Enter The Total Number In Set A “))
+For I in range(no):
+    M = int(input(“ Enter Elements “):
+    a.add(m);
+B = set([])
+No = int(input(“ Enter The Total Number In Set B “))
+For I in range(no):
+    M = int(input(“ Enter Elements “))
+    b.add(m);
+Print(“ Set A : “,a)
+Print(“ Set B : “,b)
+While 1:
+    Print(“\n\n\n *****  MENU ****** \n”)
+    Print(“1 : Union”)
+    Print(“2 : Intersection”)
+    Print(“3 : Set Difference”)
+    Print(“4 : Subset”)
+    Print(“5 : Is Empty”)
+    Print(“6 : Len of A”)
+    Print(“7 : Len of B”)
+    Print(“8 : size of A and B “)
+    Print(“9 : searching “)
+    Print(“10: add Element “)
+    Print(“11: Remove Element”)
+    # print(“12: isContains “)
+    # print(“ \n\n “)
+    Ch=int(input(“\n***** Enter your Choice ****** \n”))
+    If ch==1:
+        Print(“\n Union of A and B as”,a.union(b))
+    If ch==2:
+        Print(“ \n Intersection of A and B”,a.intersection(b))
+    If ch==3:
+        Print(“\n Set difference A-B as”,a-b)
+    If ch==4:
+        If a.issubset(b):
+            Print(“\nIs subset”)
+        Else:
+            Print(“\n Not a subset”)
+    If ch==5:
+        If len(a)==0:
+            Print(“\n Set A is Empty”)
+        Else:
+            Print(“\n Set A is not empty”)
+    If ch==6:
+        Print(“Len A=”,len(a))
+    If ch==7:
+        Print(“Len B=”,len(b))
+    If ch== 8 :
+        Print(“\n size of a is :”,sizeof(a)) 
+        Print(“\n size of a is :”,sizeof(b)) 
+    If ch== 9 :
+        Num = int(input(“ \n Enter Element to Be Searched “))
+        If num in a :
+            Print(“ \n Number is Found In Set A  “)
+        Elif num in b:
+            Print(“ \n Number Is Found In Set B  “)
+        Else :
+            Print(“\n\n Sorry ! Number Not Found “)
+    If ch==10 :
+        Ad = int(input(“ Enter Number To be Added In Set  A “))
+        a.add(ad)
+        Print(“ \n number Added In Set A “)
+        Print(“\n  Updated Set :  “,a)
+    If ch==11 :
+        Rm = int(input(“ Enter Numbber To Delete “))
+        a.remove(rm)
+        Print(“\n  Number Removed “)
+        Print(“ \n  updated Set Set “ , a)
 
-def stud_get():
-    print("Enter no of student in SE Class : ")
-    N = int(input())
-    global marks
-    for i in range(N):
-        print("Enter the marks (Write -1 for absent student)")
-        M = int(input())
-        marks.append(M)
-    print(marks)
-
-def avg_marks():
-    sum = 0
-    cnt = 0
-    for i in range(len(marks)):
-        if marks[i] != -1:
-            sum = sum + marks[i]
-            cnt += 1
-    print("Total Marks -", sum)
-    print("Avg in float", sum / cnt)
-    print("Avg in integer", sum // cnt)
-
-def high_low():
-    temp = marks[0]
-    for i in range(len(marks)):
-        if marks[i] > temp:
-            temp = marks[i]
-    print("Highest Marks-", temp)
-    temp = marks[0]
-    for i in range(len(marks)):
-        if marks[i] != -1:
-            if temp > marks[i]:
-                temp = marks[i]
-    print("Lowest Marks", temp)
-
-def count_abs():
-    cnt = 0
-    for i in range(len(marks)):
-        if marks[i] == -1:
-            cnt += 1
-    print("No of absent students=", cnt)
-
-def high_freq():
-    freq = []
-    for i in range(len(marks)):
-        if marks[i] != -1:
-            freq.append(marks.count(marks[i]))
-    print(freq)
-    k = max(freq)
-    print("Highest frequency-", k)
-    print("Highest Marks", marks[k])
-
-if __name__ == "__main__":
-    print("*** Take Input.............")
-    stud_get()
-    while True:
-        print("1. The average score of class")
-        print("2. Highest score and lowest score of class")
-        print("3. Count of students who were absent for the test")
-        print("4. Display mark with highest frequency")
-        print("5. Exit")
-        print("Enter choice")
-        choice = int(input())
-        if choice == 1:
-            avg_marks()
-        if choice == 2:
-            high_low()
-        if choice == 3:
-            count_abs()
-        if choice == 4:
-            high_freq()
-        if choice == 5:
-            exit()
 
 
 
