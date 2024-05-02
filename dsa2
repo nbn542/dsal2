@@ -1,74 +1,89 @@
-From ctypes import sizeof
-Print (“ hello World Welcome To Sets “) 
+from ctypes import sizeof
+print("hello World Welcome To Sets") 
 A = set([])
-No = int(input(“ Enter The Total Number In Set A “))
-For I in range(no):
-    M = int(input(“ Enter Elements “):
-    a.add(m);
+no = int(input("Enter The Total Number In Set A: "))
+for i in range(no):
+    m = int(input("Enter Element: "))
+    A.add(m)
+
 B = set([])
-No = int(input(“ Enter The Total Number In Set B “))
-For I in range(no):
-    M = int(input(“ Enter Elements “))
-    b.add(m);
-Print(“ Set A : “,a)
-Print(“ Set B : “,b)
-While 1:
-    Print(“\n\n\n *****  MENU ****** \n”)
-    Print(“1 : Union”)
-    Print(“2 : Intersection”)
-    Print(“3 : Set Difference”)
-    Print(“4 : Subset”)
-    Print(“5 : Is Empty”)
-    Print(“6 : Len of A”)
-    Print(“7 : Len of B”)
-    Print(“8 : size of A and B “)
-    Print(“9 : searching “)
-    Print(“10: add Element “)
-    Print(“11: Remove Element”)
-    # print(“12: isContains “)
-    # print(“ \n\n “)
-    Ch=int(input(“\n***** Enter your Choice ****** \n”))
-    If ch==1:
-        Print(“\n Union of A and B as”,a.union(b))
-    If ch==2:
-        Print(“ \n Intersection of A and B”,a.intersection(b))
-    If ch==3:
-        Print(“\n Set difference A-B as”,a-b)
-    If ch==4:
-        If a.issubset(b):
-            Print(“\nIs subset”)
-        Else:
-            Print(“\n Not a subset”)
-    If ch==5:
-        If len(a)==0:
-            Print(“\n Set A is Empty”)
-        Else:
-            Print(“\n Set A is not empty”)
-    If ch==6:
-        Print(“Len A=”,len(a))
-    If ch==7:
-        Print(“Len B=”,len(b))
-    If ch== 8 :
-        Print(“\n size of a is :”,sizeof(a)) 
-        Print(“\n size of a is :”,sizeof(b)) 
-    If ch== 9 :
-        Num = int(input(“ \n Enter Element to Be Searched “))
-        If num in a :
-            Print(“ \n Number is Found In Set A  “)
-        Elif num in b:
-            Print(“ \n Number Is Found In Set B  “)
-        Else :
-            Print(“\n\n Sorry ! Number Not Found “)
-    If ch==10 :
-        Ad = int(input(“ Enter Number To be Added In Set  A “))
-        a.add(ad)
-        Print(“ \n number Added In Set A “)
-        Print(“\n  Updated Set :  “,a)
-    If ch==11 :
-        Rm = int(input(“ Enter Numbber To Delete “))
-        a.remove(rm)
-        Print(“\n  Number Removed “)
-        Print(“ \n  updated Set Set “ , a)
+no = int(input("Enter The Total Number In Set B: "))
+for i in range(no):
+    m = int(input("Enter Element: "))
+    B.add(m)
+
+print("Set A:", A)
+print("Set B:", B)
+
+while True:
+    print("\n\n\n ***** MENU ****** \n")
+    print("1 : Union")
+    print("2 : Intersection")
+    print("3 : Set Difference")
+    print("4 : Subset")
+    print("5 : Is Empty")
+    print("6 : Len of A")
+    print("7 : Len of B")
+    print("8 : Size of A and B")
+    print("9 : Searching")
+    print("10: Add Element")
+    print("11: Remove Element")
+    print("12: isContains")
+    print("\n\n")
+
+    ch = int(input("\n***** Enter your Choice ****** \n"))
+
+    if ch == 1:
+        print("\nUnion of A and B:", A.union(B))
+
+    if ch == 2:
+        print("\nIntersection of A and B:", A.intersection(B))
+
+    if ch == 3:
+        print("\nSet difference A-B:", A - B)
+
+    if ch == 4:
+        if A.issubset(B):
+            print("\nIs subset")
+        else:
+            print("\nNot a subset")
+
+    if ch == 5:
+        if len(A) == 0:
+            print("\nSet A is Empty")
+        else:
+            print("\nSet A is not empty")
+
+    if ch == 6:
+        print("Len A =", len(A))
+
+    if ch == 7:
+        print("Len B =", len(B))
+
+    if ch == 8:
+        print("\nSize of A is:", sizeof(A))
+        print("\nSize of B is:", sizeof(B))
+
+    if ch == 9:
+        num = int(input("\nEnter Element to Be Searched: "))
+        if num in A:
+            print("\nNumber is Found In Set A")
+        elif num in B:
+            print("\nNumber Is Found In Set B")
+        else:
+            print("\nSorry! Number Not Found")
+
+    if ch == 10:
+        ad = int(input("Enter Number To be Added In Set A: "))
+        A.add(ad)
+        print("\nNumber Added In Set A")
+        print("\nUpdated Set:", A)
+
+    if ch == 11:
+        rm = int(input("Enter Number To Delete: "))
+        A.remove(rm)
+        print("\nNumber Removed")
+        print("\nUpdated Set:", A)
 
 
 
